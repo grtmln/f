@@ -435,7 +435,8 @@ header .lang{--n:5}
 .name .terms{grid-template-columns:1fr;margin-top:28px}
 @media(max-width:820px){.name,.nm-tag{grid-template-columns:1fr;gap:36px}}
 .nm-logo-wrap{grid-column:1/-1}
-.nm-logo{display:block;width:max(50vw,min(100%,380px));max-width:100%;height:auto;overflow:visible;margin:6px 0 0}
+.nm-logo{display:block;width:calc((100% - 64px)*.45);height:auto;overflow:visible;margin:6px 0 0}
+@media(max-width:820px){.nm-logo{width:100%}}
 .nm-logo .wm path,.nm-logo .wm ellipse{transition:stroke .5s cubic-bezier(.2,.7,.2,1)}
 .nm-logo .tgl{color:var(--muted);transition:color .5s cubic-bezier(.2,.7,.2,1)}
 .nm-logo.hl-form :is(.l0,.l1,.l2,.l3),.nm-logo.hl-eur :is(.l4,.l5,.l6),.nm-logo.hl-all :is(.l0,.l1,.l2,.l3,.l4,.l5,.l6),.nm-logo.hl-forme :is(.l0,.l1,.l2,.l3,.l4),.nm-logo.hl-for :is(.l0,.l1,.l2){stroke:var(--accent)}
