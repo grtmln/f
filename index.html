@@ -710,7 +710,7 @@ document.documentElement.classList.add('js');
   t.forEach(function(e){e.classList.add('rv')});
   [].slice.call(document.querySelectorAll('section .wrap>*')).forEach(function(e){if(e.id==='fw'||e.classList.contains('rv')||e.querySelector('.rv'))return;e.classList.add('rv')});
   t=document.querySelectorAll('.rv');
-  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){var d=Array.prototype.indexOf.call(x.target.parentNode.children,x.target);x.target.style.transitionDelay=(x.target.closest('.hero')?(260+d*150):Math.min(d,6)*70)+'ms';x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){var d=Array.prototype.indexOf.call(x.target.parentNode.children,x.target);x.target.style.transitionDelay=(x.target.closest('.hero')?(260+d*150):Math.min(d,6)*70)+'ms';x.target.classList.add('in');(function(el){setTimeout(function(){el.style.transitionDelay=''},1900)})(x.target);io.unobserve(x.target)}})},{threshold:.12});
   t.forEach(function(e){io.observe(e)});
   document.querySelectorAll('.feature').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
 })();
